@@ -4,8 +4,8 @@ from flask import Flask, Response
 app = Flask(__name__)
 
 
-@app.route('/')
-def index():
+@app.route('/stations')
+def stations():
     try:
         with open('data.json', 'r') as data_file:
             data = data_file.read()
